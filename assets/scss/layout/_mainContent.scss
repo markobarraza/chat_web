@@ -1,0 +1,60 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_mensajes{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    .box_mensajes{  
+        width: 1000px;
+        height: 600px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
+        padding: 30px 30px;
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            padding: 20px;
+        }
+        .contenedor_mensajes{
+            height: 90%;
+            width: 100%;
+            // background-color: blue;
+            @include tablet{
+                background-color: green;
+            }
+        }
+        .contenedor_enviar{
+            width: 100%;
+            background-color: #ffffff;
+            padding: 5px 0;
+            margin: 0;
+            border-radius: 50px 100px 100px 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #prueba{
+                width: 90%;
+                height: 35px;
+                border: none;
+                margin: 0 10px;
+            }
+            .btn-enviar{
+                background-color: #D256C1;
+                border: none;
+                padding: 15px;
+                border-radius: 100%;
+                margin: 0;
+                .send-icon{
+                    color: #ffffff;
+                    font-size: 23px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif, Helvetica, sans-serif;
+  background-color: #F153AA;
+  background-image: linear-gradient(to bottom right, #F153AA, #9258E4);
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_mensajes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_mensajes .box_mensajes {
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .container_mensajes .box_mensajes {
+    padding: 20px;
+  }
+}
+.container_mensajes .box_mensajes .contenedor_mensajes {
+  height: 90%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .container_mensajes .box_mensajes .contenedor_mensajes {
+    background-color: green;
+  }
+}
+.container_mensajes .box_mensajes .contenedor_enviar {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 5px 0;
+  margin: 0;
+  border-radius: 50px 100px 100px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container_mensajes .box_mensajes .contenedor_enviar #prueba {
+  width: 90%;
+  height: 35px;
+  border: none;
+  margin: 0 10px;
+}
+.container_mensajes .box_mensajes .contenedor_enviar .btn-enviar {
+  background-color: #D256C1;
+  border: none;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 0;
+}
+.container_mensajes .box_mensajes .contenedor_enviar .btn-enviar .send-icon {
+  color: #ffffff;
+  font-size: 23px;
+  margin-right: 3px;
+}
+
+/*# sourceMappingURL=main.css.map */
