@@ -4,27 +4,84 @@
     align-items: center;
 }
 
-.container_mensajes{
+.container_main{
     display: flex;
     justify-content: center;
     align-items: center;    
     .box_mensajes{  
-        width: 1000px;
-        height: 600px;
+        width: 800px;
+        height: 500px;
+        min-height: auto;
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 20px;
         padding: 30px 30px;
         display: flex;
         flex-direction: column;
+        box-shadow: 15px 15px 50px #00000052;
         @include tablet{
             padding: 20px;
         }
         .contenedor_mensajes{
             height: 90%;
             width: 100%;
-            // background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
             @include tablet{
                 background-color: green;
+            }
+            .mensaje_out{
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                margin: 10px 0;
+                
+                .container_mensaje{
+                    max-width: 50%;
+                    width: fit-content;
+                    text-align: right;
+                    background-color: #D256C1;
+                    padding: 10px;
+                    border-radius: 10px 10px 0 10px;
+                    color: #ffffff;
+                    font-size: .8rem;
+                    letter-spacing: .03rem;
+                    line-height: 1.1rem;
+                }
+                .user_img{
+                    background-color: #D256C1;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    margin: 10px;
+                }
+            }
+            .mensaje_in{
+                display: flex;
+                justify-content: start;
+                align-items: end;
+                margin: 10px 0;
+                .container_mensaje{
+                    max-width: 55%;
+                    width: fit-content;
+                    text-align: left;
+                    background-color: #ffffff;
+                    padding: 10px;
+                    border-radius: 10px 10px 10px 0;
+                    color: #535353;
+                    font-size: .8rem;
+                    letter-spacing: .03rem;
+                    line-height: 1.1rem;
+                }
+                .user_img{
+                    background-color: #ffffff;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
             }
         }
         .contenedor_enviar{
@@ -41,13 +98,17 @@
                 height: 35px;
                 border: none;
                 margin: 0 10px;
+                font-size: 1.2rem;
+                &:focus-visible{
+                    outline: none;
+                }
             }
             .btn-enviar{
                 background-color: #D256C1;
                 border: none;
                 padding: 15px;
                 border-radius: 100%;
-                margin: 0;
+                margin: 0 8px 0 0;
                 .send-icon{
                     color: #ffffff;
                     font-size: 23px;

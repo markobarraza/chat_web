@@ -5,6 +5,7 @@ body {
   background-color: #F153AA;
   background-image: linear-gradient(to bottom right, #F153AA, #9258E4);
   height: 100vh;
+  font-size: 16px;
 }
 
 .center {
@@ -13,35 +14,92 @@ body {
   align-items: center;
 }
 
-.container_mensajes {
+.container_main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container_mensajes .box_mensajes {
-  width: 1000px;
-  height: 600px;
+.container_main .box_mensajes {
+  width: 800px;
+  height: 500px;
+  min-height: auto;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   padding: 30px 30px;
   display: flex;
   flex-direction: column;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.3215686275);
 }
 @media screen and (max-width: 768px) {
-  .container_mensajes .box_mensajes {
+  .container_main .box_mensajes {
     padding: 20px;
   }
 }
-.container_mensajes .box_mensajes .contenedor_mensajes {
+.container_main .box_mensajes .contenedor_mensajes {
   height: 90%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 768px) {
-  .container_mensajes .box_mensajes .contenedor_mensajes {
+  .container_main .box_mensajes .contenedor_mensajes {
     background-color: green;
   }
 }
-.container_mensajes .box_mensajes .contenedor_enviar {
+.container_main .box_mensajes .contenedor_mensajes .mensaje_out {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin: 10px 0;
+}
+.container_main .box_mensajes .contenedor_mensajes .mensaje_out .container_mensaje {
+  max-width: 50%;
+  width: fit-content;
+  text-align: right;
+  background-color: #D256C1;
+  padding: 10px;
+  border-radius: 10px 10px 0 10px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.1rem;
+}
+.container_main .box_mensajes .contenedor_mensajes .mensaje_out .user_img {
+  background-color: #D256C1;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin: 10px;
+}
+.container_main .box_mensajes .contenedor_mensajes .mensaje_in {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin: 10px 0;
+}
+.container_main .box_mensajes .contenedor_mensajes .mensaje_in .container_mensaje {
+  max-width: 55%;
+  width: fit-content;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px 10px 10px 0;
+  color: #535353;
+  font-size: 0.8rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.1rem;
+}
+.container_main .box_mensajes .contenedor_mensajes .mensaje_in .user_img {
+  background-color: #ffffff;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.container_main .box_mensajes .contenedor_enviar {
   width: 100%;
   background-color: #ffffff;
   padding: 5px 0;
@@ -51,20 +109,24 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.container_mensajes .box_mensajes .contenedor_enviar #prueba {
+.container_main .box_mensajes .contenedor_enviar #prueba {
   width: 90%;
   height: 35px;
   border: none;
   margin: 0 10px;
+  font-size: 1.2rem;
 }
-.container_mensajes .box_mensajes .contenedor_enviar .btn-enviar {
+.container_main .box_mensajes .contenedor_enviar #prueba:focus-visible {
+  outline: none;
+}
+.container_main .box_mensajes .contenedor_enviar .btn-enviar {
   background-color: #D256C1;
   border: none;
   padding: 15px;
   border-radius: 100%;
-  margin: 0;
+  margin: 0 8px 0 0;
 }
-.container_mensajes .box_mensajes .contenedor_enviar .btn-enviar .send-icon {
+.container_main .box_mensajes .contenedor_enviar .btn-enviar .send-icon {
   color: #ffffff;
   font-size: 23px;
   margin-right: 3px;
