@@ -255,4 +255,17 @@ body {
   margin-right: 3px;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer p {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+.footer p span {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
 /*# sourceMappingURL=main.css.map */

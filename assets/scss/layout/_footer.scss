@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    p{
+        color: #ffffff;
+        font-size: .8rem;
+        span{
+            font-weight: 500;
+            letter-spacing: .1rem;
+        }
+    }
+}
