@@ -6,6 +6,94 @@ body {
   background-image: linear-gradient(to bottom right, #F153AA, #9258E4);
   height: 100vh;
   font-size: 16px;
+  background-color: #e5aeff;
+  position: relative;
+  z-index: 0;
+}
+
+.container_bg {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0.2;
+  background-image: linear-gradient(45deg, #fde4ff 50%, #ffffff 50%);
+  background-size: 80px 80px;
+}
+
+.container {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+}
+
+.header {
+  max-width: 800px;
+  width: 100%;
+  color: #ffffff;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    width: 85%;
+  }
+}
+.header h5 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.header h1 {
+  font-size: 3.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 3rem;
+  padding: 0;
+  margin: 0;
+}
+.header p {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.container_etiquetas {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container_etiquetas {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container_etiquetas {
+    width: 100%;
+  }
+}
+.container_etiquetas p {
+  color: #D256C1;
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .center {
@@ -18,6 +106,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 0;
+  padding: 0;
 }
 .container_main .box_mensajes {
   width: 800px;
@@ -25,15 +115,33 @@ body {
   min-height: auto;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
-  padding: 30px 30px;
+  padding: 0px 30px 30px 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.3215686275);
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .container_main .box_mensajes {
     padding: 20px;
+    margin: 0 30px;
   }
+}
+@media screen and (max-width: 576px) {
+  .container_main .box_mensajes {
+    box-shadow: none;
+    margin: 0 10px;
+    border-radius: 15px;
+  }
+}
+.container_main .box_mensajes .contenedor_mensajes_hover {
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff);
+  position: absolute;
+  top: 0;
+  border-radius: 20px 20px 0 0;
 }
 .container_main .box_mensajes .contenedor_mensajes {
   height: 90%;
@@ -43,11 +151,6 @@ body {
   justify-content: flex-end;
   overflow-y: scroll;
   scroll-behavior: smooth;
-}
-@media screen and (max-width: 768px) {
-  .container_main .box_mensajes .contenedor_mensajes {
-    background-color: green;
-  }
 }
 .container_main .box_mensajes .contenedor_mensajes .mensaje_out {
   display: flex;
@@ -67,12 +170,22 @@ body {
   letter-spacing: 0.03rem;
   line-height: 1.1rem;
 }
+@media screen and (max-width: 576px) {
+  .container_main .box_mensajes .contenedor_mensajes .mensaje_out .container_mensaje {
+    background-color: #cb1ca5;
+  }
+}
 .container_main .box_mensajes .contenedor_mensajes .mensaje_out .user_img {
   background-color: #D256C1;
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  margin: 10px;
+  margin: 0 0 0 10px;
+}
+@media screen and (max-width: 576px) {
+  .container_main .box_mensajes .contenedor_mensajes .mensaje_out .user_img {
+    background-color: #cb1ca5;
+  }
 }
 .container_main .box_mensajes .contenedor_mensajes .mensaje_in {
   display: flex;
@@ -92,12 +205,22 @@ body {
   letter-spacing: 0.03rem;
   line-height: 1.1rem;
 }
+@media screen and (max-width: 576px) {
+  .container_main .box_mensajes .contenedor_mensajes .mensaje_in .container_mensaje {
+    background-color: rgba(255, 255, 255, 0.6078431373);
+  }
+}
 .container_main .box_mensajes .contenedor_mensajes .mensaje_in .user_img {
   background-color: #ffffff;
   width: 35px;
   height: 35px;
   border-radius: 100%;
   margin-right: 10px;
+}
+@media screen and (max-width: 576px) {
+  .container_main .box_mensajes .contenedor_mensajes .mensaje_in .user_img {
+    background-color: rgba(255, 255, 255, 0.6078431373);
+  }
 }
 .container_main .box_mensajes .contenedor_enviar {
   width: 100%;

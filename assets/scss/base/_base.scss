@@ -6,4 +6,25 @@ body{
     background-image: linear-gradient(to bottom right, #F153AA, #9258E4);
     height: 100vh;
     font-size: 16px;
+    background-color: #e5aeff;
+    position: relative;
+    z-index: 0;
+    
+}
+.container_bg{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0.2;
+    background-image: linear-gradient(45deg, #fde4ff 50%, #ffffff 50%);
+    background-size: 80px 80px;
+}
+
+.container{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
 }
